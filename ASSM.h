@@ -1,6 +1,6 @@
 #include"CleverFile.h"
 #include "AssmTypeRecognizer.h"
-#include "TextsAndFiles/Text.h"
+#include "Text.h"
 #include <unordered_map>
 #include <string>
 
