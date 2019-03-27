@@ -1,4 +1,4 @@
-#include "TextsAndFiles/CleverFile.h"
+#include "CleverFile.h"
 #include "AssmTypeRecognizer.h"
 #include <cmath>
 #include <string>
