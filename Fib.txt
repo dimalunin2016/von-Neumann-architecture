@@ -1,0 +1,65 @@
+textout @text1
+call :main
+textout @text3
+end
+:fibbonachi
+	push 1
+	push [200]
+	Bool_equal
+	pop rbf
+	jne :jump0
+	jmp :jump1
+	:jump0
+		push 1
+ret
+	:jump1
+	push 0
+	push [200]
+	Bool_equal
+	pop rbf
+	jne :jump2
+	jmp :jump3
+	:jump2
+		push 1
+ret
+	:jump3
+	push [200]
+	pseudo_call
+	push 2
+	push [200]
+	Minus
+	pop [200]
+	call :fibbonachi
+	pseudo_ret
+	pop [200]
+	push [200]
+	pseudo_call
+	push 1
+	push [200]
+	Minus
+	pop [200]
+	call :fibbonachi
+	pseudo_ret
+	pop [200]
+	Plus
+ret
+
+:main
+	in
+	pop [1]
+	push [1]
+	pop [200]
+	call :fibbonachi
+	pop [1]
+	push [1]
+  textout @text2
+	out
+	push 0
+ret
+
+.data
+@text1 Hellow World! Please, enter index of Fibbonachi number:
+@text2 Your answer is:
+@text3 Thank you for using my programm!
+
+
