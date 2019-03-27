@@ -11,10 +11,13 @@
 Запуск:
 1) Компиляция
 `g++ -std=c++11 create_bin_cmd.cpp -o bincr
+
 g++ -std=c++11 main.cpp -o launch_programm
+
 g++ -std=c++11 dissasm.cpp -o dissasm`
 
 2) получение бинарника
+
 `./bincr -I <откуда читать> -O <куда писать> `
 
 пример:
